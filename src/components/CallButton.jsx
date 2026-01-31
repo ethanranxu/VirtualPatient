@@ -56,7 +56,7 @@ export function CallButton({ isCalling, disabled, onClick, status }) {
                             </div>
                         )}
                         <span className="button-text">
-                            {isCalling ? '结束' : '开始会诊'}
+                            {isCalling ? '结束' : '开始沟通'}
                         </span>
                     </div>
 

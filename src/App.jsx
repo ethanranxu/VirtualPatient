@@ -21,8 +21,11 @@ function App() {
 
     // Auto scroll to bottom
     const messagesEndRef = useRef(null);
+    // Auto scroll to bottom - only scroll if there are messages or active streaming
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        if (messages.length > 0 || currentPatientMessage) {
+            messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }
     }, [messages, currentPatientMessage]);
 
     return (
@@ -135,8 +138,9 @@ function App() {
                                         color: msg.role === 'doctor' ? 'white' : 'var(--color-text-primary)',
                                         padding: '0.75rem 1rem',
                                         borderRadius: msg.role === 'doctor' ? '12px 12px 4px 12px' : '12px 12px 12px 4px',
-                                        maxWidth: '80%',
-                                        lineHeight: 1.6,
+                                        maxWidth: '92%',
+                                        fontSize: '0.875rem',
+                                        lineHeight: 1.5,
                                         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                                     }}>
                                         {msg.content}
@@ -164,8 +168,9 @@ function App() {
                                         color: 'var(--color-text-primary)',
                                         padding: '0.75rem 1rem',
                                         borderRadius: '12px 12px 12px 4px',
-                                        maxWidth: '80%',
-                                        lineHeight: 1.6,
+                                        maxWidth: '92%',
+                                        fontSize: '0.875rem',
+                                        lineHeight: 1.5,
                                         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                                     }}>
                                         {currentPatientMessage}
