@@ -38,10 +38,12 @@ export function PersonalitySelector({ selected, onSelect, disabled }) {
                         onClick={() => !disabled && onSelect(personality.id)}
                         style={{ opacity: disabled ? 0.6 : 1, cursor: disabled ? 'not-allowed' : 'pointer' }}
                     >
-                        <div className="personality-icon" style={{ color: selected === personality.id ? 'var(--color-primary)' : 'inherit' }}>
-                            {personality.icon}
+                        <div className="personality-header-row">
+                            <div className="personality-icon" style={{ color: selected === personality.id ? 'var(--color-primary)' : 'inherit' }}>
+                                {personality.icon}
+                            </div>
+                            <h3 className="personality-name">{personality.name}</h3>
                         </div>
-                        <h3 className="personality-name">{personality.name}</h3>
                         <p className="personality-desc">{personality.description}</p>
                     </div>
                 ))}

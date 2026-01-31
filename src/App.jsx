@@ -55,15 +55,13 @@ function App() {
                 />
 
                 {/* 2. Conversation Panel (Centered) */}
-                <div style={{ width: '544px', margin: '2rem auto 0' }}>
+                <div className="chat-container-wrapper">
                     <h2 className="section-title">
                         对话记录
                     </h2>
 
-                    <section className="card" style={{
+                    <section className="card chat-card" style={{
                         marginTop: '0.5rem',
-                        height: '500px',
-                        width: '100%',
                         display: 'flex',
                         flexDirection: 'column',
                         position: 'relative',

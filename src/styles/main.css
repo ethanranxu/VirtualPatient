@@ -236,13 +236,13 @@ body {
 
     border-radius: var(--radius-lg);
     padding: var(--space-6);
-    width: 260px;
+    width: 280px;
     cursor: pointer;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 
     transition: var(--transition-smooth);
     box-shadow: var(--shadow-sm);
@@ -254,8 +254,9 @@ body {
 .personality-card.selected {
     background: white;
     border-color: var(--color-primary-light);
-    box-shadow: var(--shadow-glow), var(--shadow-float);
-    transform: translateY(-4px);
+    box-shadow: none;
+    /* No shadow as requested for consistency */
+    transform: translateY(-2px);
 }
 
 /* Selection Indicator Line */
@@ -275,10 +276,18 @@ body {
     opacity: 1;
 }
 
+.personality-header-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    width: 100%;
+}
+
 .personality-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: var(--space-4);
+    width: 44px;
+    height: 44px;
     color: var(--color-text-muted);
     transition: var(--transition-base);
 
@@ -288,7 +297,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: 8px;
+    flex-shrink: 0;
 }
 
 .personality-card.selected .personality-icon {
@@ -297,10 +307,10 @@ body {
 }
 
 .personality-name {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-text-primary);
-    margin-bottom: var(--space-2);
+    margin-bottom: 0;
 }
 
 .personality-desc {
@@ -632,10 +642,59 @@ body {
 
     .personality-grid {
         margin-bottom: var(--space-4);
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-4);
     }
 
-    .call-button-container {
-        width: 140px;
-        height: 140px;
+    /* Mobile Adjustments */
+    .personality-card {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: flex-start;
+        padding: var(--space-4);
+        text-align: left;
+        box-shadow: none;
     }
+
+    .personality-header-row {
+        gap: var(--space-3);
+        margin-bottom: var(--space-2);
+    }
+
+    .personality-icon {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+
+    .personality-name {
+        font-size: 1rem;
+    }
+
+    .personality-desc {
+        font-size: 0.75rem;
+        -webkit-line-clamp: 2;
+    }
+
+    /* Mobile: Full Width Chat & Taller History */
+    .chat-card {
+        height: 70vh !important;
+        max-height: 850px;
+    }
+}
+
+/* Desktop Default Styles for New Classes */
+.chat-container-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+.chat-card {
+    height: 600px;
+    width: 100%;
+    border: 1px solid var(--color-primary-light) !important;
+    box-shadow: none !important;
 }
