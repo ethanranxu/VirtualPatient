@@ -138,8 +138,8 @@ function App() {
                                         color: msg.role === 'doctor' ? 'white' : 'var(--color-text-primary)',
                                         padding: '0.75rem 1rem',
                                         borderRadius: msg.role === 'doctor' ? '12px 12px 4px 12px' : '12px 12px 12px 4px',
-                                        maxWidth: '92%',
-                                        fontSize: '0.875rem',
+                                        maxWidth: '98%',
+                                        fontSize: '0.75rem',
                                         lineHeight: 1.5,
                                         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                                     }}>
@@ -168,8 +168,8 @@ function App() {
                                         color: 'var(--color-text-primary)',
                                         padding: '0.75rem 1rem',
                                         borderRadius: '12px 12px 12px 4px',
-                                        maxWidth: '92%',
-                                        fontSize: '0.875rem',
+                                        maxWidth: '98%',
+                                        fontSize: '0.75rem',
                                         lineHeight: 1.5,
                                         boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                                     }}>
