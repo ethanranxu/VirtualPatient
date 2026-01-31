@@ -679,9 +679,25 @@ body {
     }
 
     /* Mobile: Full Width Chat & Taller History */
+    .chat-container-wrapper {
+        margin: 0.5rem auto 0 !important;
+        width: 100%;
+    }
+
+    /* Mobile: Full Width Chat & Taller History */
     .chat-card {
-        height: 70vh !important;
-        max-height: 850px;
+        height: 80vh !important;
+        max-height: 1000px;
+    }
+}
+
+:root {
+    --role-font-size: 0.8125rem;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --role-font-size: 0.75rem;
     }
 }
 
@@ -693,7 +709,7 @@ body {
 }
 
 .chat-card {
-    height: 600px;
+    height: 720px;
     width: 100%;
     border: 1px solid var(--color-primary-light) !important;
     box-shadow: none !important;

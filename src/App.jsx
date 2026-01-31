@@ -55,7 +55,7 @@ function App() {
                 />
 
                 {/* 2. Conversation Panel (Centered) */}
-                <div className="chat-container-wrapper">
+                <div className="chat-container-wrapper" style={{ marginTop: '1rem' }}>
                     <h2 className="section-title">
                         对话记录
                     </h2>
@@ -121,7 +121,7 @@ function App() {
                                     alignItems: msg.role === 'doctor' ? 'flex-end' : 'flex-start'
                                 }}>
                                     <span style={{
-                                        fontSize: '0.75rem',
+                                        fontSize: 'var(--role-font-size, 0.8125rem)',
                                         color: msg.role === 'doctor' ? 'var(--color-primary)' : 'var(--color-status-warning)',
                                         marginBottom: '0.25rem',
                                         fontWeight: '600'
@@ -152,7 +152,7 @@ function App() {
                                     alignItems: 'flex-start'
                                 }}>
                                     <span style={{
-                                        fontSize: '0.75rem',
+                                        fontSize: 'var(--role-font-size, 0.8125rem)',
                                         color: 'var(--color-status-warning)',
                                         marginBottom: '0.25rem',
                                         fontWeight: '600'
