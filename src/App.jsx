@@ -58,7 +58,7 @@ function App() {
                 />
 
                 {/* 2. Conversation Panel (Centered) */}
-                <div className="chat-container-wrapper" style={{ marginTop: '1rem' }}>
+                <div className="chat-container-wrapper" style={{ marginTop: '0.25rem' }}>
                     <h2 className="section-title">
                         对话记录
                     </h2>

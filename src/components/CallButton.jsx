@@ -82,7 +82,7 @@ export function CallButton({ isCalling, disabled, onClick, status }) {
 
                     {/* Integrated Visualizer (Absolute Right) */}
                     {isCalling && status === 'connected' && (
-                        <div className="audio-visualizer-mini" style={{
+                        <div className="audio-visualizer-mini visualizer-right" style={{
                             position: 'absolute',
                             right: '1.5rem',
                             top: '50%',

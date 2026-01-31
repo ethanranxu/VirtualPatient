@@ -509,6 +509,23 @@ body {
     animation-delay: -1.0s;
 }
 
+/* Symmetric Right Visualizer */
+.visualizer-right .audio-bar-white:nth-child(1) {
+    animation-delay: -1.0s;
+}
+
+.visualizer-right .audio-bar-white:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+.visualizer-right .audio-bar-white:nth-child(3) {
+    animation-delay: -0.2s;
+}
+
+.visualizer-right .audio-bar-white:nth-child(4) {
+    animation-delay: -0.4s;
+}
+
 /* ========================================
    Component: Call Status & Visualizer
    Style: Monitoring Equipment
@@ -641,7 +658,7 @@ body {
     }
 
     .personality-grid {
-        margin-bottom: var(--space-4);
+        margin-bottom: var(--space-2);
         flex-direction: column;
         align-items: stretch;
         gap: var(--space-4);
@@ -680,7 +697,7 @@ body {
 
     /* Mobile: Full Width Chat & Taller History */
     .chat-container-wrapper {
-        margin: 0.5rem auto 0 !important;
+        margin: 0.25rem auto 0 !important;
         width: 100%;
     }
 
@@ -705,7 +722,7 @@ body {
 .chat-container-wrapper {
     width: 100%;
     max-width: 600px;
-    margin: 2rem auto 0;
+    margin: 1rem auto 0;
 }
 
 .chat-card {
