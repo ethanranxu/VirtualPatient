@@ -91,6 +91,8 @@ export function useVirtualPatient() {
                         return '';
                     });
                     console.log('Response complete');
+                    // 确保等待标志被重置
+                    isWaitingForResponseRef.current = false;
                 }
             });
 
@@ -119,6 +121,9 @@ export function useVirtualPatient() {
                     if (clientRef.current && clientRef.current.isConnected) {
                         clientRef.current.cancelResponse();
                     }
+
+                    // 重置等待标志，确保下一次静音检测可以触发新响应
+                    isWaitingForResponseRef.current = false;
                 },
                 onSilenceDetected: () => {
                     if (!isWaitingForResponseRef.current) {

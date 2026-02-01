@@ -2,7 +2,7 @@
 
 ![Project Banner](https://img.shields.io/badge/Status-Active-success) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-A professional digital health application designed to train medical empathy through real-time voice interaction with AI-simulated patients. Built with **React** and **Zhipu GLM-4 Realtime API**.
+A professional digital health application designed to train medical empathy through real-time voice interaction with AI-simulated patients. Built with **React** and **OpenAI Realtime API**.
 
 ## ✨ Features
 
@@ -19,7 +19,7 @@ A professional digital health application designed to train medical empathy thro
 ## 🛠️ Tech Stack
 
 - **Frontend**: React (Vite), CSS3 (Variables, Animations)
-- **AI Integration**: Zhipu GLM-Realtime (WebSockets)
+- **AI Integration**: OpenAI Realtime API (WebSockets)
 - **Audio**: Native Web Audio API (Recorder & Player)
 - **Design**: Custom "Digital Health" Design System
 
@@ -28,7 +28,7 @@ A professional digital health application designed to train medical empathy thro
 ### Prerequisites
 
 - Node.js (v18+)
-- Zhipu AI API Key
+- OpenAI API Key
 
 ### Installation
 
@@ -50,7 +50,7 @@ A professional digital health application designed to train medical empathy thro
    ```
    Edit `.env`:
    ```env
-   VITE_ZHIPUAI_API_KEY=your_api_key_here
+   VITE_OPENAI_API_KEY=your_api_key_here
    ```
 
 4. **Run Development Server**
